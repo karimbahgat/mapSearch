@@ -11,7 +11,7 @@ SCRAPE = False
 ROOT = "https://legacy.lib.utexas.edu/maps/thailand.html" # should be part of the perry cestanada website
 
 # init
-db = MapDB('test_web.db')
+db = MapDB('testdata/test_web.db')
 
 if SCRAPE:
     # define images to process
@@ -46,10 +46,10 @@ if SCRAPE:
 
 
 # test inspect maps
-#for row in db.query('select link,width,height,transform from maps'):
-#    print list(row)
-#db.view_image(2)
-#db.view_georef(2)
+for row in db.query('select link,width,height,transform from maps'):
+    print list(row)
+db.view_image(2)
+db.view_georef(2)
 
 
 
